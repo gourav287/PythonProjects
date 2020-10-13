@@ -11,3 +11,5 @@ Here goes the list of projects (will be updated with each project):
 2) Cartoonization from the camera frame using OpenCV.
 
 3) YouTube video downloader (with GUI) using pytube and tkinter.
+
+4) GUI based Morse Code converter (Morse-Coder-Decoder) using tkinter.
