@@ -1,8 +1,3 @@
-# import pywhatkit
-
-# pywhatkit.sendwhatmsg_instantly('+917747083826', '🥳', 25)
-
-
 import time 
 import pywhatkit
 import pyautogui
@@ -13,8 +8,9 @@ keyboard = Controller()
 
 def send_whatsapp_message(msg: str):
     try:
+        phone_number = input("Please enter the phone number to send message:")
         pywhatkit.sendwhatmsg_instantly(
-            phone_no="+919340315895", 
+            phone_no=phone_number, 
             message=msg,
             tab_close=True
         )
