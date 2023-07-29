@@ -1,17 +1,6 @@
 import pandas as pd
 
 file_to_read = "/Users/sgourav/Library/CloudStorage/OneDrive-VMware,Inc/myCodes/vdk/datajobs/horizon-cloud-customer-grouping/customer_grouping.csv"
-# def run():
-#     with open(file_to_read, 'r') as csv_file:
-#         csv_reader = csv.DictReader(csv_file)
-#         customer_group, customer_id, ea_account = [], [],[]
-#         for i in csv_reader:
-#             print(i['customer_name'])
-#             break
-
-# run()
-# customer group, customer id, ea account
-
 def run():
     df = pd.read_csv(file_to_read)
 
