@@ -1,0 +1,42 @@
+[
+    {
+        "date": "2025-05-25",
+        "category": "meal",
+        "details": "2 phulka, dal"
+    },
+    {
+        "date": "2025-05-25",
+        "category": "meal",
+        "details": "2 phulka, sbazi"
+    },
+    {
+        "date": "2025-05-25",
+        "category": "water",
+        "details": "2 glasses"
+    },
+    {
+        "date": "2025-05-25",
+        "category": "water",
+        "details": "2 Ltr"
+    },
+    {
+        "date": "2025-05-25",
+        "category": "water",
+        "details": "2 Ltr"
+    },
+    {
+        "date": "2022-01-01",
+        "category": "water",
+        "details": "2 Ltr"
+    },
+    {
+        "date": "2022-01-01",
+        "category": "water",
+        "details": "2 Ltr"
+    },
+    {
+        "date": "2022-01-01",
+        "category": "water",
+        "details": "2 Ltr"
+    }
+]
