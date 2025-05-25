@@ -2,8 +2,13 @@
 # This module works with a JSON file to save, read, and delete entries for the CLI Tracker Application.
 import os
 import json
+import logging
 
-FILEPATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "cli_tracker.json")
+DIRPATH = os.path.dirname(os.path.abspath(__file__))
+FILEPATH = os.path.join(DIRPATH, "cli_tracker.json")
+LOGPATH = os.path.join(DIRPATH, "tracker.log")
+
+logging.basicConfig(filename=LOGPATH, level=logging.INFO, format='%(asctime)s - %(message)s')
 
 def saveEntryToJson(date, category, details):
     # Save the entry to a JSON file.
@@ -14,7 +19,10 @@ def saveEntryToJson(date, category, details):
         with open(FILEPATH, 'w') as file:
             json.dump([], file)
     with open(FILEPATH, 'r+') as file:
-        data = json.load(file)
+        try:
+            data = json.load(file)
+        except json.JSONDecodeError:
+            data = []
         entry = {
             "date": date,
             "category": category,
@@ -26,6 +34,7 @@ def saveEntryToJson(date, category, details):
     
 
     print(f"Entry saved to Database: \nDate: {date}, \nCategory: {category}, \nDetails: {details}")
+    logging.info(f"Entry added: {entry}")
 
 def readEntriesFromJson():
     # Read entries from the JSON file.

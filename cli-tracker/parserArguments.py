@@ -3,43 +3,36 @@
 import datetime
 import validations
 
-def addParserArguments(parser, argumentVal, actionVal="store", helpVal=None, 
-                       defaultVal=None, typeVal=None, versionVal=None, requiredVal=False):
-    kwargs = {
-        'action': actionVal,
-    }
-    if helpVal is not None:
-        kwargs['help'] = helpVal
-    if defaultVal is not None:
-        kwargs['default'] = defaultVal
-    if typeVal is not None:
-        kwargs['type'] = typeVal
-    if versionVal is not None:
-        kwargs['version'] = versionVal
-    if requiredVal:
-        kwargs['required'] = requiredVal
-    parser.add_argument(argumentVal, **kwargs)
+def add_parser_arguments(parser):
+    parser.add_argument('--date', type=validations.validDate,
+                        default=datetime.datetime.today().strftime('%Y-%m-%d'),
+                        help='Date for the entry (format: YYYY-MM-DD)')
 
-def parserArguments(parser=None):
-    # Parse command line arguments for the CLI Tracker Application.
-    addParserArguments(parser, "--version", 
-                       actionVal="version", 
-                       helpVal="Show the version of the CLI Tracker Application",
-                       versionVal="CLI Tracker Application Version 1.0")
+    parser.add_argument('--category', type=validations.validCategory,
+                        required=True,
+                        help='Entry category (e.g., water, meal, activity, notes)')
+
+    parser.add_argument('--details', type=validations.validDetails,
+                        required=True,
+                        help='Add notes or details for this entry')
+
+def view_parser_arguments(parser):
+    parser.add_argument('--limit', type=int, default=5,
+                        help='Limit the number of entries displayed (default: 5)')
+
+    parser.add_argument('--date', type=validations.validDate,
+                        help='Filter by date (format: YYYY-MM-DD)')
+
+    parser.add_argument('--category', type=validations.validCategory,
+                        help='Filter by category (e.g., water, meal, activity, notes)')
+
+def parser_arguments(parser, parser_type):
+    if parser is None:
+        raise ValueError("Parser object is required")
     
-    addParserArguments(parser, "--date",
-                       helpVal="Specify the date for the CLI Tracker Application (format: YYYY-MM-DD)", 
-                       defaultVal=datetime.datetime.today().strftime("%Y-%m-%d"), 
-                       typeVal=validations.validDate)
-    
-    addParserArguments(parser, "--category",
-                       helpVal="Specify the category for the Tracker Application (e.g., 'water', 'meal', 'activity', 'notes')", 
-                       typeVal=validations.validCategory,
-                       requiredVal=True)
-    
-    addParserArguments(parser, "--details",
-                       helpVal="Show detailed information about the CLI Tracker Application",
-                       typeVal=validations.validDetails,
-                       requiredVal=True)
-    
-    return parser.parse_args()
+    if parser_type == 'add':
+        add_parser_arguments(parser)
+    elif parser_type == 'view':
+        view_parser_arguments(parser)
+    else:
+        raise ValueError(f"Unknown parser type: {parser_type}. Expected 'add' or 'view'.")

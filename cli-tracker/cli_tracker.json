@@ -38,5 +38,50 @@
         "date": "2022-01-01",
         "category": "water",
         "details": "2 Ltr"
+    },
+    {
+        "date": "2025-05-25",
+        "category": "activity",
+        "details": "30 mins swim"
+    },
+    {
+        "date": "2025-05-25",
+        "category": "activity",
+        "details": "30 mins swim"
+    },
+    {
+        "date": "2025-05-25",
+        "category": "activity",
+        "details": "30 mins dance"
+    },
+    {
+        "date": "2025-05-25",
+        "category": "activity",
+        "details": "30 mins gym"
+    },
+    {
+        "date": "2025-05-25",
+        "category": "activity",
+        "details": "30 mins nothing"
+    },
+    {
+        "date": "2025-05-25",
+        "category": "activity",
+        "details": "30 mins nothing"
+    },
+    {
+        "date": "2025-05-25",
+        "category": "activity",
+        "details": "30 mins nothing"
+    },
+    {
+        "date": "2025-05-25",
+        "category": "activity",
+        "details": "30 mins nothing"
+    },
+    {
+        "date": "2025-05-25",
+        "category": "activity",
+        "details": "30 mins something"
     }
 ]
