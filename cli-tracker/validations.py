@@ -2,8 +2,9 @@
 # This module validates command line arguments for the CLI Tracker Application.
 import argparse
 import datetime
+from config import VALID_CATEGORIES
 
-def validDate(date_str):
+def valid_date(date_str):
     """Validate the date format YYYY-MM-DD."""
     try:
         datetime.datetime.strptime(date_str, "%Y-%m-%d")
@@ -11,17 +12,16 @@ def validDate(date_str):
     except ValueError:
         raise argparse.ArgumentTypeError("Date must be in the format YYYY-MM-DD.")
 
-def validCategory(category_str):
+def valid_category(category_str):
     """Validate the category input."""
-    valid_categories = ['water', 'meal', 'activity', 'notes']
     category_str_lower = category_str.lower()
-    if category_str_lower not in valid_categories:
+    if category_str_lower not in VALID_CATEGORIES:
         raise argparse.ArgumentTypeError(
-            f"Invalid category: {category_str}. Choose from {valid_categories}."
+            f"Invalid category: {category_str}. Choose from {VALID_CATEGORIES}."
         )
     return category_str_lower
 
-def validDetails(details_str):
+def valid_details(details_str):
     """Validate the details input."""
     if not details_str:
         raise argparse.ArgumentTypeError("Details cannot be empty.")

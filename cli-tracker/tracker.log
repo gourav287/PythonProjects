@@ -1,2 +1,23 @@
-2025-05-25 18:50:41,193 - Entry added: {'date': '2025-05-25', 'category': 'activity', 'details': '30 mins nothing'}
-2025-05-25 19:06:44,987 - Entry added: {'date': '2025-05-25', 'category': 'activity', 'details': '30 mins something'}
+2025-05-26 23:36:15,822 - Adding entry on 2025-05-26 with category 'meal' and details '1 salad'
+2025-05-26 23:36:15,823 - Entry added to Database: {'date': '2025-05-26', 'category': 'meal', 'details': '1 salad'}
+2025-05-26 23:36:22,368 - Adding entry on 2025-05-26 with category 'water' and details '1 ltr'
+2025-05-26 23:36:22,369 - Entry added to Database: {'date': '2025-05-26', 'category': 'water', 'details': '1 ltr'}
+2025-05-26 23:36:29,444 - Adding entry on 2025-05-01 with category 'activity' and details '30 mins swim'
+2025-05-26 23:36:29,445 - Entry added to Database: {'date': '2025-05-01', 'category': 'activity', 'details': '30 mins swim'}
+2025-05-26 23:36:34,880 - Viewing entries in the database.
+2025-05-26 23:36:34,880 - Displayed 3 entries successfully.
+2025-05-26 23:36:40,590 - Viewing entries in the database.
+2025-05-26 23:36:40,591 - Displayed 1 entries successfully.
+2025-05-26 23:36:46,177 - Viewing entries in the database.
+2025-05-26 23:36:46,177 - No entries found in the CLI Tracker Application with the specified filters.
+2025-05-26 23:36:53,606 - Viewing entries in the database.
+2025-05-26 23:36:53,607 - Displayed 1 entries successfully.
+2025-05-26 23:36:59,880 - --all or both --date and --category are required to delete some/all entries.
+2025-05-26 23:36:59,880 - Failed to delete entries from the database.
+2025-05-26 23:37:22,809 - Deleting entry on 2025-01-01 with category 'activity'
+2025-05-26 23:37:22,811 - No entry found for date: 2025-01-01 and category: activity.
+2025-05-26 23:37:22,811 - Failed to delete entries from the database.
+2025-05-26 23:37:34,191 - Deleting entry on 2025-05-01 with category 'activity'
+2025-05-26 23:37:34,192 - Entry deleted for date: 2025-05-01 and category: activity.
+2025-05-26 23:37:43,674 - Deleting all entries in the database
+2025-05-26 23:37:43,675 - All entries deleted from the database.
