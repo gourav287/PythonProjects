@@ -22,15 +22,20 @@ A simple Python command-line application to **track daily activities**, includin
 ```bash
 git clone https://github.com/your-username/cli-tracker.git
 cd cli-tracker
+```
 
 2. **(Optional) Create a virtual environment**:
 
+```bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
 
 3. **Run the tracker**:
 
+```bash
 python tracker.py --help
+```
 
 ---
 
@@ -38,32 +43,41 @@ python tracker.py --help
 
 ➕ Add an Entry
 
+```bash
 python tracker.py add --category meal --details "Lunch: rice and veggies"
 Optional flags:
 --date YYYY-MM-DD – Defaults to today if not provided
 --category – One of meal, water, activity, notes
 --details – Required
+```
 
 👀 View Entries
 
+```bash
 python tracker.py view
 Optional filters:
 --limit 10 – Show up to 10 entries (default: 5)
 --date YYYY-MM-DD – Filter by date
 --category – Filter by category
+```
 
 🗑️ Delete Entries
 
 Delete a specific entry:
+```bash
 python tracker.py delete --date 2025-05-26 --category water
+```
 
 Delete all entries:
+```bash
 python tracker.py delete --all
+```
 
 ---
 
 ## 📁 Project Structure
 
+```bash
 cli-tracker/
 ├── tracker.py                 # Main script
 ├── parser_arguments.py        # Argument parsing logic
@@ -72,6 +86,7 @@ cli-tracker/
 ├── cli_tracker.json           # Stored data
 ├── tracker.log                # Action logs
 └── README.md                  # Documentation
+```
 
 ---
 
@@ -88,11 +103,11 @@ cli-tracker/
  ## 🤝 Contributing
 
 Pull requests and feedback are welcome. If you'd like to contribute:
-Fork the repo
-Create your feature branch (git checkout -b feature/YourFeature)
-Commit your changes (git commit -m 'Add feature')
-Push to the branch (git push origin feature/YourFeature)
-Open a pull request
+- Fork the repo
+- Create your feature branch (git checkout -b feature/YourFeature)
+- Commit your changes (git commit -m 'Add feature')
+- Push to the branch (git push origin feature/YourFeature)
+- Open a pull request
 
 ## 🧠 Credits
 Created by Gourav
